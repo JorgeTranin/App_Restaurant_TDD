@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.jorge.app_restaurant_tdd"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.jorge.app_restaurant_tdd"
