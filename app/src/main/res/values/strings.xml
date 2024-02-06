@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">App_Restaurant_TDD</string>
+    <string name="usuario">Usuário:</string>
 </resources>

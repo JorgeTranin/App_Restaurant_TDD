@@ -18,7 +18,8 @@ class MainViewModelTest {
     @Test
     fun `o nome do usuario tem que chegar do tipo null - test precisa falhar`() {
         val nomeUsuario = mainViewModel.recuperarUsuario()
-        Assert.assertEquals(null, nomeUsuario)
+        val nomeEsperado = "Antonio Jorge Garcia"
+        Assert.assertEquals(nomeEsperado, nomeUsuario)
     }
 
     @Test
@@ -30,7 +31,7 @@ class MainViewModelTest {
     @Test
     fun `test verifica quantidade de itens na lista de produtos`(){
         val listaDeProdutos = mainViewModel.getProduto()
-        val tamanhoEsperado = 2
+        val tamanhoEsperado = 3
 
         Assert.assertEquals(tamanhoEsperado, listaDeProdutos.size)
     }
