@@ -27,4 +27,25 @@ class MainViewModelTest {
         Assert.assertEquals("Antonio Jorge Garcia", nomeUsuario)
     }
 
+    @Test
+    fun `test verifica quantidade de itens na lista de produtos`(){
+        val listaDeProdutos = mainViewModel.getProduto()
+        val tamanhoEsperado = 2
+
+        Assert.assertEquals(tamanhoEsperado, listaDeProdutos.size)
+    }
+
+    @Test
+    fun `test verificar se todos os itens da lista estao ok`(){
+        val listaDeProdutos = mainViewModel.getProduto()
+        val listaFake = mutableListOf<MainTest.Produto>(
+            MainTest.Produto("Refrigerante", "Faz Mal", "R$20"),
+            MainTest.Produto("Pizza", "Faz Bem", "R$40"),
+            MainTest.Produto("Cola", "Faz Mal", "R$20")
+        )
+
+        Assert.assertEquals(listaFake, listaDeProdutos)
+
+    }
+
 }
