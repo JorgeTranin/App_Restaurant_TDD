@@ -9,10 +9,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 
 @HiltViewModel
-class MainViewModel(private val mainRepositorio: MainRepositorio) : ViewModel() {
+class MainViewModel @Inject constructor(private val mainRepositorio: MainRepositorio) : ViewModel() {
     private val _listaDeProdutos = MutableStateFlow<MutableList<Produto>>(mutableListOf())
     private val listaDeProdutosFlow: StateFlow<MutableList<Produto>> = _listaDeProdutos
 
